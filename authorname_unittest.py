@@ -5,9 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-class TestAuthorName(unittest.TestCase):
 
-    def setUp(self):
+def setUp(self):
    
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()

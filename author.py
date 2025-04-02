@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import unittest
 
 
 def setup():
@@ -16,9 +17,6 @@ def teardown(driver):
 def check_authorname_block():
     driver = setup()
  
-
-
-    
     get_author = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, '(//small[@class])')))
     
     while True:

@@ -26,18 +26,12 @@ def login_clk(driver):
     log_in = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,'(//p/a)[1]')))
     log_in.click()
     
-
     
-    
-   
-
-
 def assert_successful(driver):
     assert "Quotes to Scrape" in driver.title, "Login failed"
     print("Login successful - Assertion passed!")
     
 def assert_validation(driver):
-    
     
     error_message = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//p[@class="error"]')))
     assert error_message.text == "Error while logging in: please, provide your username"
@@ -57,10 +51,3 @@ def valid_login(driver):
 
 
 
-driver = setup()
-valid_login(driver)
-
-
-
-
-driver.quit()
